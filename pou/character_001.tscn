@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://deb03nf0s7vdh"]
+[gd_scene load_steps=3 format=3 uid="uid://deb03nf0s7vdh"]
 
-[ext_resource type="Texture2D" uid="uid://dr50a52amu5u8" path="res://Character_001.png" id="1_xhihd"]
+[ext_resource type="Texture2D" uid="uid://byajef4s1uf2m" path="res://gato/FreeCatCharacterAnimations/1_Cat_Idle-Sheet.png" id="1_xhihd"]
 
-[node name="Character001" type="Sprite2D"]
-position = Vector2(293, 189)
+[sub_resource type="CircleShape2D" id="CircleShape2D_whh2o"]
+radius = 7.07107
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-2, 3)
 texture = ExtResource("1_xhihd")
+hframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-3, 6)
+shape = SubResource("CircleShape2D_whh2o")
