@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://j68a7830ittr"]
+[gd_scene load_steps=10 format=4 uid="uid://j68a7830ittr"]
 
 [ext_resource type="Texture2D" uid="uid://b65ie5xfgcmpx" path="res://assests/TX Tileset Ground.png" id="1_31n4k"]
 [ext_resource type="Texture2D" uid="uid://c7r3deuc1sv58" path="res://assests/TX Village Props.png" id="2_4jjb6"]
@@ -1982,6 +1982,15 @@ texture = ExtResource("2_4jjb6")
 [sub_resource type="TileSet" id="TileSet_muf66"]
 sources/0 = SubResource("TileSetAtlasSource_t2g8h")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suuo3"]
+size = Vector2(168, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2epvp"]
+size = Vector2(63, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2g8h"]
+size = Vector2(1012, 103)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -1991,3 +2000,17 @@ tile_set = SubResource("TileSet_2epvp")
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAUAP3/AAA6ABAAAAAUAP7/AAA6ABEAAAAUAP//AAA6ABIAAAAUAAAAAAA6ABMAAAAVAP3/AAA7ABAAAAAVAP7/AAA7ABEAAAAVAP//AAA7ABIAAAASAP3/AAA4ABAAAAASAP7/AAA4ABEAAAASAP//AAA4ABIAAAASAAAAAAA4ABMAAAATAP3/AAA5ABAAAAATAP7/AAA5ABEAAAATAP//AAA5ABIAAAATAAAAAAA5ABMAAAAQAP3/AAA2ABAAAAAQAP7/AAA2ABEAAAAQAP//AAA2ABIAAAAQAAAAAAA2ABMAAAARAP3/AAA3ABAAAAARAP7/AAA3ABEAAAARAP//AAA3ABIAAAARAAAAAAA3ABMAAAD+//v/AAACAAoAAAD+//z/AAACAAsAAAD+//3/AAACAAwAAAD+//7/AAACAA0AAAD+/wAAAAACAA8AAAD///v/AAADAAoAAAD///z/AAADAAsAAAD///3/AAADAAwAAAD///7/AAADAA0AAAD/////AAADAA4AAAD//wAAAAADAA8AAAAAAPv/AAAEAAoAAAAAAPz/AAAEAAsAAAAAAP3/AAAEAAwAAAAAAP7/AAAEAA0AAAAAAP//AAAEAA4AAAAAAAAAAAAEAA8AAAABAPv/AAAFAAoAAAABAPz/AAAFAAsAAAABAP3/AAAFAAwAAAABAP7/AAAFAA0AAAABAP//AAAFAA4AAAABAAAAAAAFAA8AAAACAPv/AAAGAAoAAAACAPz/AAAGAAsAAAACAP3/AAAGAAwAAAACAP7/AAAGAA0AAAACAP//AAAGAA4AAAACAAAAAAAGAA8AAAADAPv/AAAHAAoAAAADAPz/AAAHAAsAAAADAP3/AAAHAAwAAAADAAAAAAAHAA8AAAA=")
 tile_set = SubResource("TileSet_muf66")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer2"]
+position = Vector2(628, -32.5)
+shape = SubResource("RectangleShape2D_suuo3")
+debug_color = Color(0.580889, 0.421217, 0.9121, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer2"]
+position = Vector2(702.5, -50)
+shape = SubResource("RectangleShape2D_2epvp")
+debug_color = Color(0.696907, 0.288614, 0.987751, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(394, 64.5)
+shape = SubResource("RectangleShape2D_t2g8h")
