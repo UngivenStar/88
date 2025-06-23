@@ -3,27 +3,27 @@
 [ext_resource type="Texture2D" uid="uid://c7r3deuc1sv58" path="res://assests/TX Village Props.png" id="1_a3eyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_br0fb"]
-size = Vector2(124, 65)
+size = Vector2(62, 39.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbqx3"]
-size = Vector2(125, 118)
+size = Vector2(61, 62)
 
 [node name="Area2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-23, 14)
-scale = Vector2(2.8606, 2.72743)
+position = Vector2(-10, 6)
+scale = Vector2(1.45685, 1.42823)
 texture = ExtResource("1_a3eyd")
 hframes = 9
 vframes = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -76)
+position = Vector2(1, -36.25)
 shape = SubResource("RectangleShape2D_br0fb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.5, 2)
+position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_hbqx3")
 debug_color = Color(0.717416, 0.351132, 0.83498, 0.42)
