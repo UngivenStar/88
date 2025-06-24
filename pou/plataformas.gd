@@ -23,8 +23,8 @@ func act_plat():
 		type_plat.REBOTE:
 			$Sprite2D.modulate = Color.DEEP_PINK
 			
-		type_plat.REBOTE:
-			$Sprite2D.modulate = Color.DEEP_PINK
+		type_plat.PINCHOS:
+			$Sprite2D.modulate = Color.MEDIUM_SPRING_GREEN
 	
 
 
@@ -39,6 +39,9 @@ func _on_body_entered(body: Node2D) -> void:
 					body.puede_rebotar(rebote)
 				else:
 					body.velocity.y = body.brinco * rebote
+			type_plat.PINCHOS:
+					
+
 
 func oscilar():
 	var tween = create_tween()
