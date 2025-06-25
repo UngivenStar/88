@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cq7gsegnuia3q"]
+[gd_scene load_steps=13 format=3 uid="uid://bbkmqx16qw34i"]
 
 [ext_resource type="Script" uid="uid://ccjm2wxjsk4jj" path="res://mvimiento_Player.gd" id="1_ck3sb"]
 [ext_resource type="Texture2D" uid="uid://byajef4s1uf2m" path="res://gato/FreeCatCharacterAnimations/1_Cat_Idle-Sheet.png" id="1_gj0cs"]
@@ -221,12 +221,7 @@ _data = {
 &"run": SubResource("Animation_1pecs")
 }
 
-[sub_resource type="QuadMesh" id="QuadMesh_cx4ix"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_35kqm"]
-size = Vector2(172, 20)
-
-[node name="Node2D" type="Node2D"]
+[node name="personaje" type="Node2D"]
 
 [node name="personaje" type="CharacterBody2D" parent="."]
 script = ExtResource("1_ck3sb")
@@ -248,14 +243,3 @@ shape = SubResource("RectangleShape2D_xhihd")
 libraries = {
 &"": SubResource("AnimationLibrary_1pecs")
 }
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
-position = Vector2(40, 35)
-scale = Vector2(168, 19.5)
-mesh = SubResource("QuadMesh_cx4ix")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(41, 33)
-shape = SubResource("RectangleShape2D_35kqm")

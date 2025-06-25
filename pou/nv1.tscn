@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://j68a7830ittr"]
+[gd_scene load_steps=14 format=4 uid="uid://j68a7830ittr"]
 
 [ext_resource type="Texture2D" uid="uid://b65ie5xfgcmpx" path="res://assests/TX Tileset Ground.png" id="1_31n4k"]
 [ext_resource type="Texture2D" uid="uid://c7r3deuc1sv58" path="res://assests/TX Village Props.png" id="2_4jjb6"]
+[ext_resource type="PackedScene" uid="uid://bbkmqx16qw34i" path="res://personaje.tscn" id="3_4jjb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31n4k"]
 texture = ExtResource("2_4jjb6")
@@ -4646,6 +4647,16 @@ visible = false
 position = Vector2(-286.75, 193)
 shape = SubResource("RectangleShape2D_pl4h8")
 
+<<<<<<< HEAD
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer3"]
+visible = false
+position = Vector2(434.25, 267.5)
+shape = SubResource("RectangleShape2D_yqh40")
+
+[node name="personaje" parent="TileMapLayer3" instance=ExtResource("3_4jjb6")]
+position = Vector2(-436, -107)
+=======
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+>>>>>>> 15acbfc06efba19e4e65cd15529980dc3d800684
